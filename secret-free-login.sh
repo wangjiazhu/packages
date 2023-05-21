@@ -4,9 +4,9 @@ source /etc/init.d/functions
 # 安装sshpass软件
 yum install -y sshpass
 if [ $? -eq 0 ];then
-    action "sshpass install success!" /bin/true
+    action "sshpass 安装成功！" /bin/true
 else
-    action "sshpass install failed!" /bin/false
+    action "sshpass 安装失败！" /bin/false
     exit 1
 fi
 
