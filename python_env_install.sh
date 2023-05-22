@@ -49,7 +49,7 @@ spawn sh ${WORK_DIR}/Anaconda3-2020.11-Linux-x86_64.sh
 expect ">>> "
 send "\r"
 send "q"
-expect "\[no\]"
+expect "\[no\] >>>"
 send "yes\r"
 expect "\[/root/anaconda3\]"
 send "/application/anaconda3\r"
