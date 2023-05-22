@@ -95,7 +95,7 @@ source ~/.bashrc
 
 expect <<EOF
 set timeout -1
-spawn conda create --name ${PYTHON_VERSION} python=${PYTHON_VERSION:0-3:3}
+spawn conda create --name ${PYTHON_VERSION} python=${PYTHON_VERSION}
 expect "Proceed"
 send "y\r"
 expect eof
