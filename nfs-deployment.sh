@@ -111,7 +111,7 @@ function nfsClient(){
 	if [ ! -d "$MOUNT_DIR" ];then
 		mkdir -p $MOUNT_DIR
 	fi
-	NFS_SERVER_DIR=$(showmount -e 192.168.72.11|awk 'NR==2{print $1}')
+	NFS_SERVER_DIR=$(showmount -e $NFS_SERVER_IP|awk 'NR==2{print $1}')
 	mount -t nfs $NFS_SERVER_IP:$NFS_SERVER_DIR $MOUNT_DIR
 	if [ $? -ne 0 ];then
 		action "挂载$NFS_SERVER_IP:$NFS_SERVER_DIR至$MOUNT_DIR" /bin/false
