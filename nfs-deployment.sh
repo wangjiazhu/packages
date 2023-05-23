@@ -79,7 +79,7 @@ function nfsClient(){
 	# 检查NFS服务端挂载目录
 	showmount -e $NFS_SERVER_IP
 	if [ $? -ne 0 ];then
-		action "服务端：$NFS_SERVER_IP共享目录失败" bin/false
+		action "服务端：$NFS_SERVER_IP共享目录失败" /bin/false
 		echo "检查$NFS_SERVER_IP地址是否正确、本机IP是否与$NFS_SERVER_IP同网段等"
 		exit 1
 	fi
