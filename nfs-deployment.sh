@@ -108,7 +108,7 @@ function nfsClient(){
 	if [[ $MOUNT_DIR == "" ]];then
 		MOUNT_DIR="/data"
 	fi
-	if [ ! -d $MOUNT_DIR ];then
+	if [ ! -d "$MOUNT_DIR" ];then
 		mkdir -p $MOUNT_DIR
 	fi
 	NFS_SERVER_DIR=$(showmount -e 192.168.72.11|awk 'NR==2{print $1}')
